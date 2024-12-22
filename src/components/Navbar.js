@@ -7,7 +7,14 @@ const Navbar = () => {
   const { language, toggleLanguage } = useLanguage();
 
   return (
-    <Box bg="#111" p="1rem 1.5rem" position="sticky" top="0" zIndex={10}>
+    <Box
+      bg="#111"
+      p="1rem 1.5rem"
+      position="sticky"
+      top="0"
+      zIndex={10}
+      h="100%"
+    >
       <Flex
         align="center"
         justify="space-between"

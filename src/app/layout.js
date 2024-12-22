@@ -1,4 +1,4 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import Providers from "./providers";
 import Navbar from "@components/Navbar";
 
@@ -10,16 +10,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body style={{ margin: 0 }} suppressHydrationWarning>
+      <body
+        style={{ margin: 0, backgroundColor: "#111" }}
+        suppressHydrationWarning
+      >
         <Providers>
-          <Flex direction="column" h="100vh" overflow="hidden">
-            <Box flex="0 0 10vh">
-              <Navbar />
-            </Box>
-            <Box flex="1" overflowY="auto">
-              {children}
-            </Box>
-          </Flex>
+          <Box
+            as="main"
+            pb={8}
+            maxW="36rem"
+            marginLeft="auto"
+            marginRight="auto"
+          >
+            <Navbar />
+            {children}
+          </Box>
         </Providers>
       </body>
     </html>
